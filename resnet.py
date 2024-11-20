@@ -54,8 +54,8 @@ test_transform = transforms.Compose([
 # train_dataset=ImageDataset.from_dataset_obj(train_dataset,transforms=train_transform)
 # test_dataset=ImageDataset.from_dataset_obj(train_dataset,transforms=test_transform)
 #创建数据加载器
-train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True, num_workers=0)
-test_loader = DataLoader(test_dataset, batch_size=32, shuffle=True, num_workers=0)
+train_loader = DataLoader(train_dataset, batch_size=128, shuffle=True, num_workers=0)
+test_loader = DataLoader(test_dataset, batch_size=128, shuffle=True, num_workers=0)
 #遍历数据加载器
 for batch in train_loader:
     images, labels = batch
