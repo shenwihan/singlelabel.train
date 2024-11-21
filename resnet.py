@@ -24,7 +24,7 @@ category='coatingcolor'
 lr=0.00001
 pkl_root='C:/Users/LENOVO/PycharmProjects/tcm-image-dataset/output/20241118-213353/singlelabel_CoatingColor.pkl'
 
-num_classes=2
+
 num_epochs=50
 batch_size=128
 
@@ -51,8 +51,8 @@ test_transform = transforms.Compose([
 ])
 
 # # 转换为torch数据集
-# train_dataset=ImageDataset.from_dataset_obj(train_dataset,transforms=train_transform)
-# test_dataset=ImageDataset.from_dataset_obj(train_dataset,transforms=test_transform)
+train_dataset=ImageDataset.from_dataset_obj(train_dataset,transforms=train_transform)
+test_dataset=ImageDataset.from_dataset_obj(test_dataset,transforms=test_transform)
 #创建数据加载器
 train_loader = DataLoader(train_dataset, batch_size=128, shuffle=True, num_workers=0)
 test_loader = DataLoader(test_dataset, batch_size=128, shuffle=True, num_workers=0)
